@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('head', {title: 'Movie Database - Version 2.0'}); %>
+    <%- include('head', {title: 'Movie Database - Movie Database v2.0'}); %>
   </head>
 
   <body>
-    <%- include('header'); %>
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu is-active">
+        <div class="navbar-start">
+          <!-- navbar items --><a class="navbar-item" href="/"> Home </a>
+          <a class="navbar-item" href="/reviews"> Reviews </a>
+        </div>
+      </div>
+      <div class="navbar-menu is-active">
+        <!-- shown on mobile -->
+      </div>
+    </nav>
 
     <section class="section">
       <div class="container is-fluid">
@@ -77,7 +87,7 @@
           <% if (!msg.errors) { %>
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link" type="submit">Add Review</button>
+              <button class="button is-link" type="submit">Add review</button>
             </div>
           </div>
           <%}%>
